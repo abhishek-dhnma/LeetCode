@@ -28,8 +28,8 @@ class Solution{
             int currentLength = 0;
             
             while( s.find (currentNum ) != s.end() ){
-                currentNum += 1;
-                currentLength += 1;
+                currentNum ++;
+                currentLength ++;
             }
             
             ans = max( ans, currentLength );
