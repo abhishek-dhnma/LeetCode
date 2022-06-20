@@ -2,23 +2,23 @@ class Solution {
 public:
     bool isPalindrome(int x) {
         
-        if(x < 0){
-        return false;
+        string str;
+       str = to_string(x);
+        
+        string rstr;
+        
+        for(int n= str.length() - 1; n >=0 ; n--){
+            rstr.push_back(str[n]);
         }
         
-    long rev = 0;
-    int num = x;
-    while(x != 0){
-
-        rev = rev *10 + x%10;
-        x /= 10;
-    }
-
-    if ( num == rev){
-        return true;
-    }else{
-        return false;
-    }
+        
+        if(rstr == str){
+            return true;
+        }else{
+            return false;
+        }
+        
+        
         
     }
 };
