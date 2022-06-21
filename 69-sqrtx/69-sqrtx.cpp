@@ -6,16 +6,25 @@ public:
             return x;
         }
         
-        long i = 0;
-        while(i*i <= x){
-            if(i*i == x){
-                return i;
-            }
-            i++;
+        //Using Binary Search kind off algo Here
+        
+        int s = 1;
+        int e = x;
+        
+        int ans;
+        while(s <= e){
+            
+            int mid = s + (e-s)/2;
+            
+             if(mid <= x/mid){
+                ans = mid;
+                s = mid +1;
+            }else{
+                e = mid -1;
+            }  
         }
-        
-        
-        return i-1;
+        return ans;
         
     }
+        
 };
