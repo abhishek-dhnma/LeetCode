@@ -13,9 +13,9 @@ public:
             }
             i++;
         }
-        i--;
         
-        return i;
+        
+        return i-1;
         
     }
 };
