@@ -16,3 +16,7 @@ cout << ss << " ";
 }
 return ans;
 Now Check Soluton file
+nums.insert( nums.end(), nums.begin(), nums.end() );
+return nums;
+Syntax :
+(  vector_name.insert(position, iterator1, iterator2) )
