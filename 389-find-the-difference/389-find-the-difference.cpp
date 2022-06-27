@@ -2,17 +2,17 @@ class Solution {
 public:
     char findTheDifference(string s, string t) {
         
-        int ans =0;
+        int ans1=0, ans2=0;
         
         for(int i=0; i<s.length(); i++){
-            ans ^= s.at(i);
+            ans1 += s[i];
         }
         
         for(int i=0; i<t.length(); i++){
-            ans ^= t.at(i);
+            ans2 += t[i];
         }
         
-        return ans;
+        return (ans2-ans1);
         
         
     }
