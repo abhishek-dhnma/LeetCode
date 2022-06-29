@@ -11,7 +11,7 @@
  */
 class Solution {
     
-     void fun(TreeNode * root, vector < int > & ans, int cur_sum, vector < vector < int >>& finalans) {
+     void fun(TreeNode * root, vector < int > ans, int cur_sum, vector < vector < int >>& finalans) {
       if (root == NULL) {
         return;
       }
@@ -25,7 +25,7 @@ class Solution {
       fun(root -> left,  ans, cur_sum - root -> val, finalans);
       fun(root -> right, ans, cur_sum - root -> val, finalans);
 
-      ans.pop_back();
+     // ans.pop_back();
 
     }
     
