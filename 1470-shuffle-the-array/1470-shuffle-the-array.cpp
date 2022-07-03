@@ -5,7 +5,7 @@ public:
     int i = 0;
     int j = n;
         
-        while(i < n && j < 2*n){
+        while(i < n ){
             
             ans.push_back(nums[i]);
             
