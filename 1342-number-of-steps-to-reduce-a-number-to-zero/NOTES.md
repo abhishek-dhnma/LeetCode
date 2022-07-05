@@ -1,1 +1,2 @@
-​
+MORE Approaches Like Bit-Manipluation and recursion and Buildin Function
+https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/discuss/2077956/C%2B%2B-or-Short-w-4-Approaches-O(1)-Space
