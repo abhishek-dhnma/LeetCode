@@ -3,7 +3,8 @@ Basic Brute/ Intuitive Approach (C++)  :
 2. Matrix Transpose means A = A' , Whicyh Means All rows converted into column and all column converted into row.
 3.   vector<vector<int>> Ans(c, vector<int> (r,0));
 4.   vector size of c and having each element is vector of size r and initial them with zero.
-​
+T(n) = O(mn)
+S(n) =O(mn)
 ```
 class Solution {
 public:
@@ -17,7 +18,3 @@ Ans[j][i] = matrix[i][j];
 }
 }
 return Ans;
-}
-};
-```
-​
