@@ -13,5 +13,7 @@ public:
         
         return max_sum;
         
+        // can be solve by STL Accumulate function
+        
     }
 };
