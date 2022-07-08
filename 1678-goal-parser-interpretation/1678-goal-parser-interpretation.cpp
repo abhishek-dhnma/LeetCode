@@ -12,6 +12,7 @@ public:
                 
             }else if(command[i] == '(' && command[i+1] == ')'){
                 ans += ('o');
+                i++;
             }
             else if(command[i] == '(' && command[i+1] == 'a' && command [i+2] == 'l'){
                 ans.push_back('a');
