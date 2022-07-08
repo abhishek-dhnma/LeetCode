@@ -14,7 +14,7 @@ public:
                 ans += ('o');
                 i++;
             }
-            else if(command[i] == '(' && command[i+1] == 'a' && command [i+2] == 'l'){
+            else if(command[i] == '(' && command[i+1] == 'a'){
                 ans.push_back('a');
                 ans.push_back('l');
                 i += 3;
