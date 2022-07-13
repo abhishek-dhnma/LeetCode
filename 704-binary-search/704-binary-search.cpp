@@ -8,6 +8,7 @@ public:
         
         while(s <= e){
             int m = s + ((e-s)>>1);
+            // right shift 1 times which is equal to n(x) = n(x) >> 2(b); means we divide the number by factor of 2power(x) s is the number if times we what to right shift  
             
             if( nums[m] == target){
           
