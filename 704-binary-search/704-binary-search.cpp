@@ -7,7 +7,7 @@ public:
         
         
         while(s <= e){
-            int m = s + (e-s)/2;
+            int m = s + ((e-s)>>1);
             
             if( nums[m] == target){
           
