@@ -12,11 +12,11 @@ public:
             if( nums[m] == target){
           
                 return m;
-            }else if( nums[m] > target){
-                e = m-1;
+            }else if( nums[m] < target){
+                s = m+1;
                 
             }else{
-                s = m+1;
+                e = m-1;
             }
         }
         
