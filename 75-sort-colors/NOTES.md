@@ -4,3 +4,4 @@ h 1. It can be solved by any sorting algorithm Like : Bubble Sort, Insertion Sor
 4. One For Way :  A rather straight forward solution is a two-pass algorithm using counting sort.
 5. Second Way : Iterate the array counting number of 0's, 1's, and 2's. Overwrite array with the total number of 0's, then 1's and followed by 2's.
 6. Third way : Dutch national flag problem : https://www.educative.io/answers/the-dutch-national-flag-problem-in-cpp
+7. https://leetcode.com/problems/sort-colors/discuss/1256365/C%2B%2B-oror-Easy-to-understand-oror-full-explanation
