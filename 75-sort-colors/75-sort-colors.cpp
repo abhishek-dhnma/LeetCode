@@ -3,44 +3,29 @@ public:
     void sortColors(vector<int>& arr) {
         int n= arr.size();
         
-        int zero = 0;
-        int one = 0;
-        int two = 0;
-        int i;
+        // Dutch National Flag Problem 
+        //  https://www.educative.io/answers/the-dutch-national-flag-problem-in-cpp
         
-        for(i=0; i<n; i++){
-            
-        if(arr[i] == 0 ){
-            zero++;
-        }else if (arr[i] == 1){
-            one++;
-        }else if(arr[i] == 2){
-            two++;
-        }
-        }
-        
-        i = 0;
+        int low = 0;
+     int mid = 0;
+     int high = n-1;
 
-       while (zero > 0) {
-        arr[i++] = 0;
-        zero--;
-    }
-  
-    // Then all the 1s
-    while (one > 0) {
-        arr[i++] = 1;
-        one--;
-    }
-  
-    // Finally all the 2s
-    while (two > 0) {
-        arr[i++] = 2;
-        two--;
-    }
-  
-            
+     while(mid <= high){
+
+         if(arr[mid] == 0){
+             swap(arr[mid], arr[low]);
+             mid++;
+             low++;
+
+         }else if( arr[mid] == 1){
+             mid++;
+
+         }else if( arr[mid] == 2){
+             swap(arr[mid], arr[high]);
+             high--;
+
+         }
+     }
         
-    }
-        
-        
+    }     
     };
