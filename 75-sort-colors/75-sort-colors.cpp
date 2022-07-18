@@ -5,9 +5,9 @@ public:
         
         int flag = false;
         
-        for(int i=0; i<n-1; i++){
+        for(int i=1; i<=n; i++){
 
-        for(int j=0; j<n-1; j++){
+        for(int j=0; j<n-i; j++){
             if(nums[j] > nums[j+1]){
                 swap(nums[j], nums[j+1]);
                 flag = true;
