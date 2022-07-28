@@ -1,28 +1,32 @@
 class Solution {
 public:
-    string decodeMessage(string k, string m) {
+    string decodeMessage(string key, string message) {
         
-         map<char,char>mp;
+       map<char,char>mp;
         char temp  = 'a';
-        for(int i = 0; i < k.length(); i++) {
-            if(k[i] != ' ' && mp.find(k[i]) == mp.end()) {
-                mp[k[i]] = temp;
+        for(int i = 0; i < key.length(); i++) {
+            if(key[i] != ' ' && mp.find(key[i]) == mp.end()) {
+                mp[key[i]] = temp;
                 temp++;
             }
             
         }
-        
+
         string res = "";
-        
-        for(int i = 0; i < m.length(); i++) {
-            if(m[i] != ' ') {
-                res+= mp[m[i]];
-            }
-            else {
-                res+= " ";
-            }
-        }
+
+
+         for(int i=0; i<message.length(); i++){
+             
+             if(message[i] != ' '){
+
+                 res = res + mp[ message[i] ] ;
+
+             }else{
+                 res += ' ';
+             }
+         }
         
         return res;
+        
     }
 };
