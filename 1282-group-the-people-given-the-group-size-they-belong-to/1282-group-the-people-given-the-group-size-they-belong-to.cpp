@@ -17,7 +17,7 @@ public:
         
         if(map[key].size() == key ){
             ans.push_back( map[key]);
-            map.erase(key);
+            map[key].clear();
         }
     }
         
