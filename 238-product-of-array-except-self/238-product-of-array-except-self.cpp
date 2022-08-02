@@ -22,6 +22,5 @@ public:
         // [24,12,8,6]
         
         return finalPrductofboth;
-        
     }
 };
