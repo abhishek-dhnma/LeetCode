@@ -16,13 +16,13 @@ public:
         
         if(root == NULL) return 0;
     
-        rangeSumBST(root->left,low,high);
-        if(root->val >= low and root->val <=high){
-            sum += root->val;
-        }
-        rangeSumBST(root->right,low,high);
-        
-        return sum;
+        if(root->val>low && root->val>high) { return rangeSumBST(root->left,low,high);
+           
+       }else if(root->val<low && root->val<high) {
+           return rangeSumBST(root->right,low,high);
+       }else{
+           return root->val + rangeSumBST(root->left,low,high) + rangeSumBST(root->right,low,high);
+       }
         
     }
 };
