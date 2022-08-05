@@ -3,8 +3,8 @@ public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int> ans;
         
-        int m = matrix.size();
-        int n = matrix[0].size();
+        int m = matrix.size(); // row size
+        int n = matrix[0].size(); // column size
         
     int top = 0;
     int down = m-1;
