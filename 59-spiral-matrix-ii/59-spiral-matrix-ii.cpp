@@ -1,25 +1,51 @@
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
-        vector<vector<int> > ret( n, vector<int>(n) );
-        	int k = 1, i = 0;
-        	while( k <= n * n )
-        	{
-        		int j = i;
-                    // four steps
-        		while( j < n - i )             // 1. horizonal, left to right
-        			ret[i][j++] = k++;
-        		j = i + 1;
-        		while( j < n - i )             // 2. vertical, top to bottom
-        			ret[j++][n-i-1] = k++;
-        		j = n - i - 2;
-        		while( j > i )                  // 3. horizonal, right to left 
-        			ret[n-i-1][j--] = k++;
-        		j = n - i - 1;
-        		while( j > i )                  // 4. vertical, bottom to  top 
-        			ret[j--][i] = k++;
-        		i++;      // next loop
-        	}
-        	return ret;
+        
+    int pp = pow(n,2);
+    
+    vector<vector<int>> matrix(n, vector<int>(n));
+
+    int t = 0;
+    int d = n-1;
+    int l = 0;
+    int r = n-1;
+    int dir = 0;
+    int g=1;
+
+
+    while(t<=d && l<=r){
+        // l->r
+        if(dir==0){
+        for(int i=l; i<=r; i++){
+            matrix[t][i] = g++;;
+        }
+        dir = 1;
+        t++;
+        // t -> d
+        }else if(dir==1){
+            for(int i=t; i<=d; i++){
+               matrix[i][r] = g++;;
+            }
+            r--;
+            dir = 2;
+            // r -> l
+        }else if(dir==2){
+            for(int i=r; i>=l; i--){
+                matrix[d][i] = g++;;
+            }
+            d--;
+            dir = 3;
+            // d -> t
+        }else if(dir==3){
+            for(int i=d; i>=t; i--){
+                matrix[i][l] = g++;;
+            }
+            l++;
+            dir = 0;
+        }
+    }
+        
+        return matrix;
     }
 };
