@@ -1,1 +1,4 @@
-​
+- Run in spiral way and at every element/step
+- Use a count/val which insert val into matrix in spiral way
+- What i learn : How to create 2D vector with MxN Size;
+- ```vector<vector<int>> vv (M, vector<int>(N)) ```
