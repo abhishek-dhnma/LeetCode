@@ -3,20 +3,22 @@ public:
     int balancedStringSplit(string s) {
         
         int ans = 0;
+        int c1=0,c2=0;
         
-        for(int i=0; i<s.size(); i++){
-        string str = s.substr(0,i);
             
-            char ch1 = 'L';
-            char ch2 = 'R';
+            for(int j=0; j < (s.substr(0,j)).size()+1; j++){
+                if(s[j] == 'L'){
+                    c1++;
+                    
+                }else{
+                    c2++;
+                }
             
-           int Ll =  count(str.begin(), str.end(),ch1);
-            int Rr = count(str.begin(), str.end(),ch2);
-            
-            if(Ll == Rr){
+            if(c1 == c2){
                 ans++;
             }
-            }
+            
+        }
         
         return ans;
         
