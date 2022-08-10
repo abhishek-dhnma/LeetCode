@@ -2,22 +2,21 @@ class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         
-        sort(nums.begin(), nums.end());
-        int size = nums.size();
-        int ans = size;
-       // nums.resize(nums.size()+1);
+        set<int> s;
+        int n = nums.size();
+        for(int i=0; i<=n; i++){
+            s.insert(i);
+        }
         
-        
-        
-        for(int i=0;i< size; i++){
+        for(auto i = 0; i < n; i++){
             
-            if(nums[i] != i){
-                ans = i;
-                break;
+            if(s.find(nums[i]) != s.end()){
+                s.erase(nums[i]);
+                i--;
             }
         }
         
-        return ans;
-        
+        auto ans = s.begin();
+        return *ans;
     }
 };
