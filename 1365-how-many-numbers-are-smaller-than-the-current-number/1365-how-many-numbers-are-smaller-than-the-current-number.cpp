@@ -8,7 +8,10 @@ public:
             int c = 0;
             for(int j=0; j<nums.size(); j++){
                 
-                if( j != i && nums[j] < nums[i]){
+                if(i==j){
+                    continue;
+                }
+                if( nums[j] < nums[i]){
                     c++;
                 }
             }
