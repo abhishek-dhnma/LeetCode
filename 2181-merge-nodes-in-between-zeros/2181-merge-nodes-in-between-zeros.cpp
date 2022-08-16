@@ -15,25 +15,27 @@ public:
     
     ListNode* mergeNodes(ListNode* head) {
         
-        ListNode ans, *tail = &ans;
+        int sum = 0;
+        ListNode ans;
+      ListNode *tail = &ans;
         
         while(head){
-                        
-            int sum = 0;
-            if(head->val == 0) head = head->next;
-            if(!head) break;
-            
-            while(head->val != 0){
+            if(head->val == 0){
                 
-                    sum = sum + head->val;
-                    head = head->next;
-                }
-             tail->next =   new ListNode(sum);
-            tail = tail->next;
-            
+             tail->next =  new ListNode(sum);
+                tail = tail->next;
+                
+                head = head->next;
+                sum = 0;
+            }else{
+                sum = sum + head->val;
+                head = head->next;
             }
+
             
-        return ans.next;
+        }
+        
+        return ans.next->next;
         
         }
 };
