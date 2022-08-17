@@ -9,11 +9,11 @@ public:
         
         int ans = 0;
         string st;
-        for(auto xx : words){
+        for(auto word : words){
             
-            for(auto ss : xx){
+            for(auto ch : word){
             
-              st +=    morse_code[(ss - 'a')] ;
+              st +=    morse_code[(ch - 'a')] ;
                 
             }
             s.insert(st);
