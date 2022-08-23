@@ -1,3 +1,6 @@
+}
+while(l2){
+sum =  l2->val + carry;
 carry = sum/10;
 ans_head->next = new ListNode((sum%10));
 l2 = l2->next;
@@ -8,14 +11,10 @@ ans_head->next = new ListNode(carry);
 }
 return aaa->next;
 }
-};
 ```
 ​
 2. Code 2 - Consise Code - All handle in one loop
 ```
-class Solution {
-public:
-ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 int carry = 0;
 int sum = 0;
 ListNode * ans_head = new ListNode();
@@ -30,5 +29,4 @@ ans_head = ans_head->next;
 }
 return aaa->next;
 }
-};
 ```
