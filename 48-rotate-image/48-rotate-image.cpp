@@ -1,19 +1,32 @@
 class Solution {
 public:
-    void rotate(vector<vector<int>>& matrix) {
+    void rotate(vector<vector<int>>& mat) {
         
-                int n = matrix.size();
-        int a = 0;
-        int b = n-1;
-        while(a<b){
-            for(int i=0;i<(b-a);++i){
-                swap(matrix[a][a+i], matrix[a+i][b]);
-                swap(matrix[a][a+i], matrix[b][b-i]);
-                swap(matrix[a][a+i], matrix[b-i][a]);
-            }
-            ++a;
-            --b;
+        int n = mat.size();
+       
+        
+        for(int j=0; j<n; j++){ // j -> coloum || i -> row
+
+        int s =0;
+        int e = n-1;
+
+        while(s<e){
+
+            swap(mat[s][j], mat[e][j]);
+            s++;
+            e--;
+
         }
+    }
+
+    // STEP 2. swap elements above diagonal to below elements
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            swap(mat[i][j], mat[j][i]);
+        }
+    }
+        
+        
         
     }
 };
