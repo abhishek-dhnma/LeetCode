@@ -7,7 +7,9 @@ public:
         
         // ClockWise Rotation
     // STEP 1. Reverse upside to dopwnside
-    for(int j=0; j<n; j++){ // j -> coloum || i -> row
+        
+         reverse(mat.begin(), mat.end());
+   /* for(int j=0; j<n; j++){ // j -> coloum || i -> row
 
         int s =0;
         int e = n-1;
@@ -20,6 +22,7 @@ public:
 
         }
     }
+    */
 
     // STEP 2. swap elements above diagonal to below elements
     for(int i=0; i<n; i++){
