@@ -5,7 +5,9 @@ public:
         int n = mat.size();
        
         
-        for(int j=0; j<n; j++){ // j -> coloum || i -> row
+        // ClockWise Rotation
+    // STEP 1. Reverse upside to dopwnside
+    for(int j=0; j<n; j++){ // j -> coloum || i -> row
 
         int s =0;
         int e = n-1;
