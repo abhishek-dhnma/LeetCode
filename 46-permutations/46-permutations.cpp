@@ -3,7 +3,7 @@ public:
     
     void permutations(vector<int>& nums, int i, vector<vector<int>>& ans){
         
-        if(i == nums.size()-1){
+        if(i == nums.size()){
             vector<int> xx = nums;
             ans.push_back(xx);
             return;
