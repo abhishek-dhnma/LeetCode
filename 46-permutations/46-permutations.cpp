@@ -4,8 +4,7 @@ public:
     void permutations(vector<int>& nums, int i, vector<vector<int>>& ans){
         
         if(i == nums.size()-1){
-            vector<int> xx = nums;
-            ans.push_back(xx);
+            ans.push_back(nums);
             return;
         }
         
