@@ -12,13 +12,8 @@ public:
                 continue;
             }
             
-            if(s[i] >= 'a' and s[i] <= 'z'  ){
-                c++;
-            }
+           c++;
             
-            if(s[i] >= 'A' and s[i] <= 'Z'){
-                c++;
-            }
             
             if(i == 0 || s[i-1] == ' '){
                 break;
