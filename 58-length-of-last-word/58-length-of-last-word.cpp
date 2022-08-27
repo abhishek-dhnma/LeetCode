@@ -20,13 +20,9 @@ public:
                 c++;
             }
             
-            if(i == 0){
+            if(i == 0 || s[i-1] == ' '){
                 break;
             }
-        
-            if(s[i-1] == ' ' ){
-                    break;
-                }
         }
         
         return c;
