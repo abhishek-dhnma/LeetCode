@@ -52,17 +52,17 @@ public:
         int m = nums1.size();
         int n = nums2.size();
         
-        cout << m << " " << n ;
+       // cout << m << " " << n ;
         
         int y = (m+n)/2;
-        cout << " " << y << " ";
+       // cout << " " << y << " ";
         
         vector<int> nums3( y +1 );
         merge(nums1, nums2, nums3);
-        cout << endl;
-        for(auto xx : nums3){
-            cout << xx << " ";
-        }
+        //cout << endl;
+        //for(auto xx : nums3){
+        //    cout << xx << " ";
+        //}
         
         double ans = 0;
         
