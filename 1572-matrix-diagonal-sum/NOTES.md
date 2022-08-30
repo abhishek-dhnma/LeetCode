@@ -1,1 +1,1 @@
-​
+Using one for loop for itreation and then add diagonal values and check if common diagonal add only one time
