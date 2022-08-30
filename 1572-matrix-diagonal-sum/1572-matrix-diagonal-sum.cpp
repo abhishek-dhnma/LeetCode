@@ -7,17 +7,13 @@ public:
         
         
         for(int i=0; i<n; i++){
-            for(int j=0; j<m; j++){
-                if(i == j  ) {
-                sum += mat[i][j];
-                    if(i != m-j-1 ) sum += mat[i][m-j-1];
-                }
-            }
-        }
-        
 
-        
-        
+                    if(i != m-i-1 ){ sum += mat[i][m-i-1] + mat[i][i];}else{
+                        sum += mat[i][i];
+                    }
+                }
+            
+
         
         return sum;
         
