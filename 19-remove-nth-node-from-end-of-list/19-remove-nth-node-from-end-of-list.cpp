@@ -12,6 +12,8 @@ class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         
+        // BRUTE FORCE
+        
         int l = 0;
         ListNode * temp = head;
         while(temp){
@@ -22,13 +24,14 @@ public:
         int diff = l-n;
         if( diff == 0){
             head = head->next;
+           //out << "1st" << endl;
             return head;
         }
         
         ListNode * pre ;
         ListNode * cur = head;
         
-        for(int i=diff; i>0; i--){
+        while(diff-- > 0){
             
             pre = cur;
             cur = cur->next;
@@ -36,7 +39,7 @@ public:
         
         
         pre->next = cur->next;
-        
+        delete cur;
         return head;
         
     }
