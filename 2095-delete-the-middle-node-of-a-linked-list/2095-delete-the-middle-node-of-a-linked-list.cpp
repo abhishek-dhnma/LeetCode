@@ -12,33 +12,22 @@ class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
         
-        if(!head) return NULL;
+        if(!head || !head->next) return NULL;
         
         ListNode * slow = head;
         ListNode * fast = head;
-        ListNode * temp = head;
+        ListNode * slowkpeeche = head;
         
-        int c = 0;
         
         while(fast and fast->next){
+            
+            slowkpeeche = slow;
             slow = slow->next;
-            c++;
             fast = fast->next->next;
         }
         
-        if(c == 0){
-            head = NULL;
-            
-            return head;
-        }
         
-        while(c-- > 1){
-            temp = temp->next;
-        }
-        
-        cout << slow->val << temp->val << " ";
-        
-        temp->next = slow->next;
+        slowkpeeche->next = slow->next;
         delete slow;
         
         
