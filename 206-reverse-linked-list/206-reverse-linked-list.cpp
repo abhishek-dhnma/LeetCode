@@ -10,7 +10,9 @@
  */
 class Solution {
 public:
-    ListNode* reverseFunction(ListNode* head){
+    
+    // iterative Way of doing this - Function 
+    /* ListNode* reverseFunction(ListNode* head){
         
         if(!head || !head->next){
             return head;
@@ -27,6 +29,30 @@ public:
         }
         
         return pre;
+        
+    }
+    */
+    
+    // Recursive Way of doing this - reverse head->next nodes and then 
+    // I will just add that reverse linked list which is given by my friend
+    // into first node then i return new reverse linked list
+    
+    ListNode * reverseFunction(ListNode * head){
+        
+        if(!head){
+            return head;
+        }
+        if(!head->next){
+            return head;
+        }
+        
+        
+        ListNode * revHead = reverseFunction(head->next);
+        ListNode * revtail = head->next;
+        revtail->next = head;
+        head->next = NULL;
+        
+        return revHead;
         
     }
     ListNode* reverseList(ListNode* head) {
