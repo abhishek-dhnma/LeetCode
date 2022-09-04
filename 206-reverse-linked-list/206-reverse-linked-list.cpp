@@ -47,12 +47,11 @@ public:
         }
         
         
-        ListNode * revHead = reverseFunction(head->next);
-        ListNode * revtail = head->next;
-        revtail->next = head;
+        ListNode * newhead = reverseFunction(head->next);
+        head->next->next = head;
         head->next = NULL;
         
-        return revHead;
+        return newhead;
         
     }
     ListNode* reverseList(ListNode* head) {
