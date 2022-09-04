@@ -22,12 +22,15 @@ public:
         ListNode * count = head;
         
         int i = 0;
+        
+        // Check if length -  Rest of the LL is greater then or nor of 'K'
         int j= 0;
         while(j < k && count){
             j++;
             count = count->next;
         }
         
+		// Condition for calling Recursive Function
         if( j >= k){
         while(cur && i < k){
             
