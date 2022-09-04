@@ -17,7 +17,6 @@ public:
             return head;
         }
         
-        
         ListNode * cur = head;
         ListNode * pre = NULL;
         ListNode * count = head;
@@ -41,9 +40,9 @@ public:
             
         ListNode * newHead = ReverseKNodes(cur, k);
         head->next = newHead;
-        }else{
-            
-           return head;
+        }
+        else{
+            return head;
         }
         
         return pre;
