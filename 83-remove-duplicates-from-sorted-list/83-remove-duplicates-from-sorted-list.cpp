@@ -17,14 +17,15 @@ public:
         
         ListNode * cur = head;
         
-        
+//     Using Two While loop 
 //       while(cur){   
 //           while(cur->next and cur->val == cur->next->val){
 //                cur->next = cur->next->next;
 //            }          
 //            cur = cur->next;    
  //       }
-        
+
+//      Uding onw loop and if else condition
         while(cur){
             
             if(cur->next and cur->val == cur->next->val){
