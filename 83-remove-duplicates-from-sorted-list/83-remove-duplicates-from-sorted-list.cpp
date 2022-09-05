@@ -11,6 +11,8 @@
 class Solution {
 public:
     
+    // CHECK NOTES
+    
     ListNode* deleteDupe(ListNode *& head){
         
         if(!head || !head->next) return head;
