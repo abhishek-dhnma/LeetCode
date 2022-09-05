@@ -28,7 +28,9 @@ public:
         while(cur){
             
             if(cur->next and cur->val == cur->next->val){
+                ListNode * temp = cur->next;
                 cur->next = cur->next->next;
+                delete temp;
             }else{
                 cur = cur->next;
             }
