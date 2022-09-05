@@ -15,3 +15,15 @@ cur = cur->next;
 }
 }
 ```
+Second way of doing same thing
+```
+//     Using Two While loop
+//       while(cur){
+//           while(cur->next and cur->val == cur->next->val){
+//                ListNode * temp = cur->next;
+//                cur->next = cur->next->next;
+//                delete temp;
+//            }
+//            cur = cur->next;
+//       }
+```
