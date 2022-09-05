@@ -16,17 +16,23 @@ public:
         if(!head || !head->next) return head;
         
         ListNode * cur = head;
-        ListNode * pre = NULL;
         
+        
+//       while(cur){   
+//           while(cur->next and cur->val == cur->next->val){
+//                cur->next = cur->next->next;
+//            }          
+//            cur = cur->next;    
+ //       }
         
         while(cur){
             
-            while(cur->next and cur->val == cur->next->val){
+            if(cur->next and cur->val == cur->next->val){
                 cur->next = cur->next->next;
+            }else{
+                cur = cur->next;
             }
             
-            cur = cur->next;
-                
         }
         
         return head;
