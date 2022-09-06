@@ -16,7 +16,6 @@ public:
         
         
         ListNode * cur = head;
-        ListNode * temp = head->next->next;
         ListNode * ans = head->next;
         
         while(true){
