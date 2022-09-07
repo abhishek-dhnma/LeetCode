@@ -37,13 +37,9 @@ public:
         }
             
             return slow;
-        }else{
+        }
             
             return NULL;
-        }
-        
-       // return head;
-        
         
     }
 };
