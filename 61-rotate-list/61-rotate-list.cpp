@@ -23,14 +23,14 @@ public:
         }
         
         
-        k = k%l;
+        k = k % l;
         if(k==0) return head;
         
         
-        //int jump = l-k-1;
+        int jump = l-k-1;
         ListNode * temp = head;
         
-        for(int i=0 ; i < (l-k-1); i++){
+        for(int i=0 ; i < jump; i++){
             temp = temp->next;
         }
         
