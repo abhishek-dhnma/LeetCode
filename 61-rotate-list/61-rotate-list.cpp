@@ -16,6 +16,8 @@ public:
         
         
        ListNode * tail = head;
+        
+        // Finding length of linked List
         int l = 1;
         while(tail and tail->next ){
             l++;
@@ -24,8 +26,11 @@ public:
         
         
         k = k % l;
+         // k == 0 means no rotating needed
+        // k == 1 means last one node comes first i.e jump = (l-k-1)
+        // k == 2 means last 2 node comes first
         if(k==0) return head;
-        
+       
         
         int jump = l-k-1;
         ListNode * temp = head;
