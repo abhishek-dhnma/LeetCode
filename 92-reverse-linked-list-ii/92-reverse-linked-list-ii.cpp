@@ -11,10 +11,12 @@
 class Solution {
     public:
 
-        ListNode * reverse(ListNode * l, ListNode * r) {
-
+        void reverse(ListNode * l, ListNode * r) {
+            
+            // Removing connection from list
             r -> next = NULL;
-
+            
+            // Reverse Process start
             ListNode * cur = l;
             ListNode * pre = NULL;
             while (cur) {
@@ -24,8 +26,6 @@ class Solution {
                 pre = cur;
                 cur = temp;
             }
-
-            return pre;
         }
 
     ListNode * reverseBetween(ListNode * head, int left, int right) {
@@ -36,7 +36,9 @@ class Solution {
         ListNode * l = NULL;
         ListNode * r = NULL;
         ListNode * pleft = NULL;
-
+        
+        
+        // Set l and r pointer to its correct position
         int i = 1;
         while (tail) {
             if (i == left) {
@@ -51,23 +53,24 @@ class Solution {
             i++;
             tail = tail -> next;
         }
-
-        ListNode * nright;
-
-            nright = r -> next;
-
+        
+        // nright = next to right 
+        ListNode * nright = r -> next; 
+    
 
         if (pleft) pleft -> next = NULL;
 
         reverse(l, r);
-
+        
+        // Connection formation - make linked list again
         l -> next = nright;
         if (pleft) {
             pleft -> next = r;
         } else {
             head = r;
         }
-
+        
+        // return formed Linked List
         return head;
 
     }
