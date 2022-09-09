@@ -33,13 +33,13 @@ public:
     ListNode* reverseBetween(ListNode* head, int left, int right) {
         
         if(!head || !head->next) return head;
-        if(left == right) return head;
+        //(left == right) return head;
         
         ListNode * rhead = NULL;
         ListNode * tail = head;
         ListNode * l = NULL;
         ListNode * r = NULL;
-         ListNode * pleft = NULL;
+        ListNode * pleft = NULL;
         
         int i = 1;
         while(tail ){
