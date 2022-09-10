@@ -16,22 +16,26 @@ public:
         
         if(!head->next and head->val == val) return NULL;
         
+        ListNode * del;
+        while(head and head->val == val){
+            del = head;
+            head = head->next;
+            delete del;
+        }
+        
         
         ListNode* cur = head;
         
         while(cur){
             if(cur->next and cur->next->val == val){
                 ListNode * temp = cur->next;
-                cur->next = cur->next->next;
-                delete temp;
+                cur->next = temp->next;
+                delete temp;    
             }else{
                 cur = cur->next;
             }
         }
-        if(head->val == val){
-            head = head->next;
-            return head;
-        }
+
         
         
         return head;
