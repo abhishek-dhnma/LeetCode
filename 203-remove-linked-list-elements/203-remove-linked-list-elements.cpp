@@ -14,8 +14,6 @@ public:
         
         if(!head) return head;
         
-        if(!head->next and head->val == val) return NULL;
-        
         ListNode * del;
         while(head and head->val == val){
             del = head;
