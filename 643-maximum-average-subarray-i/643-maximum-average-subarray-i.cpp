@@ -6,7 +6,7 @@ public:
         
         // Sliding Window Technique Question
         
-        double ans;
+        double ans = INT_MIN;
         double sum = 0;
         
 
@@ -15,7 +15,6 @@ public:
             
             if(j<k){
                 sum += nums[j];
-                ans = sum;
             }else{
             ans = max(ans, sum);
             sum += nums[j] - nums[j-k];
