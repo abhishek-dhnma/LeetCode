@@ -9,17 +9,17 @@ public:
         double ans;
         double sum = 0;
         
-        for(int i=0; i<k; i++){
-            sum += nums[i];
-        }
-        
-        ans = sum;
 
         
-        for(int j=k; j<n; j++){
+        for(int j=0; j<n; j++){
+            
+            if(j<k){
+                sum += nums[j];
+                ans = sum;
+            }else{
             ans = max(ans, sum);
             sum += nums[j] - nums[j-k];
-           
+            }
         }
         
         ans = max(ans, sum);
