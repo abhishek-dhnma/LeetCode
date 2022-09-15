@@ -21,10 +21,10 @@ public:
     ListNode * temp = head->next;
 
     while(h1 and h2 and h2->next){
-        h1->next = h2->next;
-        h1 = h1->next;
-        h2->next = h1->next;
-        h2 = h2->next;
+        h1 = h1->next = h2->next;
+        //h1 = h1->next;
+        h2 = h2->next = h1->next;
+        //h2 = h2->next;
     }
 
     h1->next = temp;
