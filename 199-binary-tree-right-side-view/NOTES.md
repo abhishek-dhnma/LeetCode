@@ -1,1 +1,3 @@
-​
+https://www.techiedelight.com/print-right-view-binary-tree/ (Explaination)
+Recursive Implementation (using Preorder Traversal)
+We can also solve this problem by using constant space and linear time. The idea is to traverse the tree in reverse preorder fashion (visit the right subtree before the left subtree) and maintain the maximum level visited so far. If the current level is more than the maximum level visited so far, then the current node is the last node of the current level, and we print it and update the last level to the current level.
