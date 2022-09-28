@@ -12,6 +12,8 @@
 class Solution {
 public:
     
+    // https://www.youtube.com/watch?v=73PQ9raLEVs&ab_channel=Vivekanand-AlgorithmEveryDay (Explanation)
+    
     // LEETCODE 100 SOLUTION CODE (USED HERE)
     bool sameTree(TreeNode* root, TreeNode* subRoot){
         
@@ -32,7 +34,9 @@ public:
             return false;
         }
         
-       return sameTree(root, subRoot) ||  isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
+        if( sameTree(root, subRoot) ) return true;
+        
+       return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
         
     }
 };
