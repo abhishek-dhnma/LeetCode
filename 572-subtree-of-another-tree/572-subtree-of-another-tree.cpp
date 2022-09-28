@@ -12,13 +12,14 @@
 class Solution {
 public:
     
-    bool yo(TreeNode* root, TreeNode* subRoot){
+    // LEETCODE 100 SOLUTION CODE (USED HERE)
+    bool sameTree(TreeNode* root, TreeNode* subRoot){
         
         if(!root and !subRoot) return true;
         if(!root || !subRoot) return false;
         if(root->val != subRoot->val) return false;
         
-        return yo(root->left,subRoot->left) and yo(root->right,subRoot->right);
+        return sameTree(root->left,subRoot->left) and sameTree(root->right,subRoot->right);
     }
     
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
@@ -31,7 +32,7 @@ public:
             return false;
         }
         
-       return yo(root, subRoot) ||  isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
+       return sameTree(root, subRoot) ||  isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
         
     }
 };
