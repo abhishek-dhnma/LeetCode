@@ -20,12 +20,12 @@ public:
             return false;
         }
         
-         bool z = p->val == q->val;
+         if(p->val != q->val) return false;
         bool x = isSameTree(p->left, q->left);
         bool y = isSameTree(p->right, q->right);
         
         
-        return x and y and z;
+        return x and y;
         
     }
 };
