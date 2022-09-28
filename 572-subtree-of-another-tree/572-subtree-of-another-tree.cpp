@@ -26,13 +26,8 @@ public:
     
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
         
-        if(!root and !subRoot){
-            return true;
-        }
-        
-        if(!root || !subRoot){
-            return false;
-        }
+        if(!subRoot) return true;
+        if(!root) return false;
         
         if( sameTree(root, subRoot) ) return true;
         
